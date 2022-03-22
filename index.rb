@@ -1,5 +1,5 @@
 require './person'
-require './capitalize'
+require './capitalizer'
 require './trimmer'
 
 person = Person.new(22, 'maximilianus')

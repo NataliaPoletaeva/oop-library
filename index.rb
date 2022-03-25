@@ -49,4 +49,4 @@ def main
   app.run
 end
 
-index
+main

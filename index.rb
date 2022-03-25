@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 require './app'
 
 class MainEntryPoint
@@ -8,7 +9,7 @@ class MainEntryPoint
 
   def user_options
     puts
-    puts 'Please choose an option by entering a number'
+    puts 'Welcome to the library! Please choose what you want to do'
     puts ['1 - List all books', '2 - List all people', '3 - Create a person', '4 - Create a book',
           '5 - Create a rental', '6 - List all rentals for a given person', '7 - Exit']
   end
@@ -49,4 +50,4 @@ def main
   app.run
 end
 
-index
+main

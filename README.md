@@ -6,8 +6,8 @@
 ## Getting started
 
  - Install [Ruby](https://www.ruby-lang.org/en/) on your machine by following this [guiding lesson](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md#macOS)
- - Uncomment the methods tets to be able to see the output actioned by the next step
- - Navigate to file location using your command-line terminal and run ruby ./person.rb
+ - Clone this project https://github.com/NataliaPoletaeva/oop-library.git on your local machine using the command line or open the repository in GitHub Desktop application
+ - Navigate to file location using your command line terminal and run 'ruby main.rb'
  
 ## Built with
 

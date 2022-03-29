@@ -1,7 +1,7 @@
-require './student'
 require './teacher'
 require './book'
 require './rental'
+require './create'
 
 class App
   def initialize
@@ -11,7 +11,9 @@ class App
   end
 
   def list_all_books
-    puts @books
+    @books.each do |book|
+      puts "Title: #{book.title}, Author: #{book.author}"
+    end
   end
 
   def list_all_people
@@ -20,44 +22,19 @@ class App
     end
   end
 
-  def create_student
-    print 'Age '
-    age = gets.chomp
-
-    print 'Name '
-    name = gets.chomp
-
-    print 'Has parent permission? [Y/N]: '
-    has_permission = gets.chomp
-    parent_permission = has_permission.include? 'Yy'
-
-    @people << Student.new(age, name, parent_permission)
-    puts 'Person created successfully'
-  end
-
-  def create_teacher
-    print 'Age '
-    age = gets.chomp
-
-    print 'Name '
-    name = gets.chomp
-
-    print 'Specialization '
-    specialization = gets.chomp
-
-    @people << Teacher.new(age, specialization, name)
-    puts 'Person created successfully'
-  end
-
   def create_person
     print 'Do you want to create a student(1) a teacher(2)? [Input the number]:'
     option = gets.chomp
 
     case option
     when '1'
-      create_student
+      student = PersonCreator.new('student')
+      @people << student.create_person
     when '2'
-      create_teacher
+      teacher = PersonCreator.new('teacher')
+      @people << teacher.create_person
+    else
+      puts 'Wrong input!'
     end
   end
 

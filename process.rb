@@ -1,6 +1,6 @@
 require './app'
 
-class OptionProcesor
+class OptionProcessor
   def initialize
     @entry_point = App.new
   end
